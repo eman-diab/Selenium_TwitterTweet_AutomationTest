@@ -16,11 +16,10 @@ public class ImageTweet extends TestBase {
 		{ 
 	    	homeObject = new HomePage(driver); 
 	    	homeObject.uploadFile("Source/VOIS.jpeg");
-            Assert.assertTrue(homeObject.tweetButtonEnable());
+                Assert.assertTrue(homeObject.tweetButtonEnable());
 	    	
 	    	homeObject.submitTweet();
-			Assert.assertTrue(homeObject.messageDisplay());
-			
+		Assert.assertTrue(homeObject.messageDisplay());	
 		}
 	    
 	    @Test
@@ -32,12 +31,8 @@ public class ImageTweet extends TestBase {
 	    	homeObject.uploadFile("Source/VOIS.jpeg");
 	    	homeObject.uploadFile("Source/VOIS.jpeg");
 	    	homeObject.uploadFile("Source/VOIS.jpeg");
-	    	homeObject.uploadFile("Source/VOIS.jpeg");
-	    	Assert.assertFalse(homeObject.uploadButtonEnable());
-	    	
-	    	homeObject.submitTweet();
-			Assert.assertFalse(homeObject.messageDisplay());
-			
+		    
+		Assert.assertFalse(homeObject.uploadButtonEnable());
 		}
 }
 
