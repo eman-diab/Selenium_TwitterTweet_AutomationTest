@@ -1,6 +1,4 @@
 # Selenium_TwitterTweet_AutomationTest
-Selenium Webdriver, TestNG, Maven , POM , Java
-
 Selenium Framwork using POM,  Java, Maven, TestNG for test tweet function on Twitter website "https://twitter.com/home"
 
 ## The Project Components and How it Work?
