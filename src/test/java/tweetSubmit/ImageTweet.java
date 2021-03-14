@@ -11,7 +11,7 @@ public class ImageTweet extends TestBase {
 	
 	
 	    @Test
-	     // submit 1 image
+	     // User can submit 1 image
  	    public void tweetWith1ImageValid()
 		{ 
 	    	homeObject = new HomePage(driver); 
@@ -24,7 +24,7 @@ public class ImageTweet extends TestBase {
 		}
 	    
 	    @Test
-	    // can't submit 5 images
+	    // User can't submit 5 images
 	    public void tweetWith5ImageInvalid()
 		{ 
 	    	homeObject = new HomePage(driver); 
