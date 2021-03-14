@@ -18,7 +18,7 @@ public class TextTweet extends TestBase {
     	//generate random characters for test character limitation 
     	String generatedString = RandomStringUtils.randomAlphabetic(280);
     	
-		//User tweet 280 character  
+		//User  can tweet 280 character  
     	homeObject = new HomePage(driver); 
     	homeObject.Usertweet(generatedString); 
     	homeObject.submitTweet();
@@ -32,7 +32,7 @@ public class TextTweet extends TestBase {
     	//generate random characters for test character limitation 
     	String generatedString = RandomStringUtils.randomAlphabetic(1);
     	
-		//User tweet 1 character  
+		//User can tweet 1 character  
     	homeObject = new HomePage(driver); 
     	homeObject.Usertweet(generatedString); 
     	homeObject.submitTweet();
@@ -46,7 +46,7 @@ public class TextTweet extends TestBase {
     	//generate random characters for test character limitation 
     	String generatedString = RandomStringUtils.randomAlphabetic(281);
     	
-		//User tweet 281 character  
+		//User can't tweet 281 character  
     	homeObject = new HomePage(driver); 
     	homeObject.Usertweet(generatedString); 
     	Assert.assertFalse(homeObject.tweetButtonEnable());
@@ -58,7 +58,7 @@ public class TextTweet extends TestBase {
     @Test
     public void tweetWithInvalidText0char()
 	{
-		//User tweet 0 character  
+		//User can't tweet 0 character  
     	homeObject = new HomePage(driver); 
     	homeObject.Usertweet(""); 
      	Assert.assertFalse(homeObject.tweetButtonEnable());
