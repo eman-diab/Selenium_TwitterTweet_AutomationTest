@@ -11,7 +11,8 @@ public class ImageTweet extends TestBase {
 	
 	
 	    @Test
-	    public void tweetWith1ImageValid()
+	     // submit 1 image
+ 	    public void tweetWith1ImageValid()
 		{ 
 	    	homeObject = new HomePage(driver); 
 	    	homeObject.uploadFile("Source/VOIS.jpeg");
@@ -23,6 +24,7 @@ public class ImageTweet extends TestBase {
 		}
 	    
 	    @Test
+	    // can't submit 5 images
 	    public void tweetWith5ImageInvalid()
 		{ 
 	    	homeObject = new HomePage(driver); 
@@ -34,7 +36,7 @@ public class ImageTweet extends TestBase {
 	    	Assert.assertFalse(homeObject.uploadButtonEnable());
 	    	
 	    	homeObject.submitTweet();
-			Assert.assertTrue(homeObject.messageDisplay());
+			Assert.assertFalse(homeObject.messageDisplay());
 			
 		}
 }
